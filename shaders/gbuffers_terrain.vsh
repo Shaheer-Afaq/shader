@@ -3,8 +3,12 @@
 out vec2 lmcoord;
 out vec2 texcoord;
 out vec4 glcolor;
+out vec3 vWorldPos;
+
+attribute vec3 cameraPosition;
 
 void main() {
+    vWorldPos = gl_Vertex.xyz + cameraPosition;
 	gl_Position = ftransform();
 	texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
 	lmcoord = (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy;
