@@ -17,7 +17,7 @@ void main() {
     if (isEyeInWater == 1) {
         float speed = frameTimeCounter * 2.5;
         distortedCoord.x += sin(texcoord.y * 25.0 + speed) * 0.0025;
-        distortedCoord.y += cos(texcoord.x * 20.0 + speed) * 0.0020;
+        distortedCoord.y += cos(texcoord.x * 20.0 + speed) * 0.0025;
     } 
     else if (isEyeInWater == 2) {
         float speed = frameTimeCounter * 1.2;
