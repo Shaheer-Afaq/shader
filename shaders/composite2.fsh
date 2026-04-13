@@ -52,4 +52,6 @@ void main() {
     }
 
     color = vec4(finalColor, 1.0);
+    color.rgb = pow(color.rgb, vec3(1.2));
+
 }
