@@ -30,7 +30,7 @@ void main() {
     if (radius <= 0 || depth <= 0.56) {
         finalColor = texture(colortex0, texcoord).rgb;
     } else {
-        // radius = min(radius, 10); 
+        radius = min(radius, 10); 
         for (int x = -radius; x <= radius; x++) {
             for (int y = -radius; y <= radius; y++) {
                 vec2 offset = vec2(float(x), float(y)) * texelSize;
